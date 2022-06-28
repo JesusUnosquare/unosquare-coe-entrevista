@@ -1,0 +1,30 @@
+<div class="row" [ngClass]="{'completed': toy.completed}">
+    <div class="title">
+        <input type="checkbox" [checked]="toy.completed" (change)="onToggle(toy)">
+        {{ toy.name }}
+    </div>
+    <div class="title">
+        {{ toy.description }}
+    </div>
+    <div class="title">
+        {{ toy.company }}
+    </div>
+    <div class="title">
+        {{ toy.ageRestriction }}
+    </div>
+    <div class="price">
+        {{ toy.price | currency }}
+    </div>
+    <div class="quantity">
+        {{ toy.quantity }}
+    </div>
+    <div class="total">
+        {{ toy.price * toy.quantity | currency }}
+    </div>
+    <div class="title">
+        <input type="number"  [(ngModel)]="toy.quantity" (change)="onChangeQty(toy)" step="1" min="1" max="100">
+    </div>
+    <div class="actions">
+        <button (click)="onDelete(toy)"> Eliminar </button>
+    </div>
+</div>
