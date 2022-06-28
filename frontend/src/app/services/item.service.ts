@@ -20,13 +20,11 @@ export class ItemService {
 
   constructor(private http:HttpClient) {}
   getItems():Observable<Toy[]>{
-    alert(this.url + '/toy');
-    console.log(this.http.get<Toy[]>(this.url + '/toy'));
     return this.http.get<Toy[]>(this.url + '/toy');
   }
 
   addItem(toy:Toy):Observable<Toy[]>{
-    return this.http.post<Toy[]>(this.url,toy,this.httpOptions);
+    return this.http.post<Toy[]>(this.url + "/toy",toy,this.httpOptions);
   }
 
   toggleItem(toy:Toy):Observable<Toy>{

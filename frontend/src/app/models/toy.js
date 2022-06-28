@@ -1,7 +1,7 @@
 export class Toy{
     id = 0;
     name = '';
-    description = 0;
+    description = '';
     ageRestriction = 0;
     company = '';
     price=0;

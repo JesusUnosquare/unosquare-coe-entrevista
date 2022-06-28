@@ -1,0 +1,32 @@
+<div>
+    <app-header></app-header>
+    <form action="" (ngSubmit)="onSubmit()">
+        <h2>Registrar un nuevo articulo</h2>
+        <div>
+            <label for="">Nombre del Artículo</label>
+            <input type="text" name="name" id="" [(ngModel)]="name">
+        </div>
+        <div>
+            <label for="">Descripción del Artículo</label>
+            <input type="text" name="descripcion" id="" [(ngModel)]="description">
+        </div>
+        <div>
+            <label for="">Compañia</label>
+            <input type="text" name="company" id="" [(ngModel)]="company">
+        </div>
+        <div>
+            <label for="">Restricción de Edad</label>
+            <input type="number" name="edad" id="" [(ngModel)]="ageRestriction">
+        </div>
+        <div>
+            <label for="">Enlace de Imagen</label>
+            <input type="text" name="image" id="" [(ngModel)]="imageLink">
+        </div>
+        <div>
+            <label for="">Precio</label>
+            <input type="number" name="price"  step="0.01" min="0" max="99999" id="" [(ngModel)]="price">
+        </div>
+    
+        <input type="submit" value="Crear">
+    </form>
+</div>
